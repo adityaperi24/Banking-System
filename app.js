@@ -1,0 +1,11 @@
+const express = require('express') 
+const app = express()
+app.listen(3000, (req,res,next)=> {
+    console.log('listening at Port')
+})
+
+app.get('/', (req,res,next)=>{
+    res.send('Hello World')
+
+})
+
