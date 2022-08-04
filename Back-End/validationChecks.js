@@ -18,7 +18,7 @@ async function validateAccount(account) {
   let query = 'select * from public."FinanceInfo" where  "budgetID" = $1'
   const accounts =  await passQuery(query, params)
   if(accounts[0]){
-      throw new Error(`$ Account: ${account} already exists!`)
+      throw new Error(`$ Account: ${account} already exists! Please go back and try again`)
   }
 
 

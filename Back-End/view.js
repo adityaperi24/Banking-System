@@ -2,7 +2,7 @@ const express = require('express')
 
 const passQuery = require('./database.js')
 
-const {checkAccount, validateNewBalance, validateAccount} = require('./validationchecks.js')
+const {checkAccount, validateNewBalance, validateAccount} = require('./validationChecks.js')
 
 viewRouter = express.Router();
 
@@ -15,7 +15,7 @@ viewRouter.get('/', async (req,res,next)=>{
           let query = 'Select * from public."FinanceInfo"'
 
          const accounts =  await passQuery(query, [])
-         res.status(200).send(accounts)
+         res.status(200).send({accounts:accounts})
          } catch(err){
           next(err)
          }
@@ -37,7 +37,7 @@ viewRouter.post('/:budgetId/:name/:user/:budget', async (req,res,next) => {
         params = [req.params.budgetId, req.params.name,req.params.user,Number(req.params.budget) ]
   
         await passQuery(query, params)
-        res.status(200).send('Account created successfully!')
+        res.status(200).send({message: 'Account created Successfully'})
 
       
       } catch(err){
@@ -54,10 +54,11 @@ viewRouter.post('/:budgetId/:name/:user/:budget', async (req,res,next) => {
     const accounts =  await passQuery(query, params)
     if(accounts[0])
     {
+      console.log(accounts[0])
       res.status(200).send(accounts[0]) 
     }
     else {
-      res.status(401).send('No Account found')
+      res.status(401).send({message:'No Account found'})
     }
     }  
     catch(err) {
@@ -112,7 +113,7 @@ viewRouter.delete('/:budgetId',async (req,res,next) => {
 
 viewRouter.use((err, req, res, next) => {
     
-  res.status(500).send(err.message)
+  res.status(500).send({message: err.message})
 })
 
 module.exports = viewRouter

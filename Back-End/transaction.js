@@ -1,7 +1,7 @@
 const express = require('express') 
 
 const passQuery = require('./database.js')
-const {checkAccount, checkTransaction, validateTransaction, findTransaction} = require('./validationchecks.js')
+const {checkAccount, checkTransaction, validateTransaction, findTransaction} = require('./validationChecks.js')
 transactionRouter = express.Router();
 
 

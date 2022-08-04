@@ -1,0 +1,38 @@
+      <!-- <div className='prompt1'>
+      <form onSubmit={() => {onCreateAccount(accountNo, username, accountType, amount)}}>
+      <Stack key={bookId}>
+      <TextField id="standard-basic"
+                 label="Account No."
+                 defaultValue={accountNo}
+                 variant="standard"
+                 onChange={e => setAccountNo(e.target.value)}
+      />
+      <TextField id="standard-basic"
+                 label="Username"
+                 defaultValue={username}
+                 variant="standard"
+                 onChange={e => setUsername(e.target.value)}
+      />
+      <TextField id="standard-basic"
+                 label="Account Type"
+                 defaultValue={accountType}
+                 variant="standard"
+                 onChange={e => setAccountType(e.target.value)}
+      />
+      <TextField id="standard-basic"
+                 label="Amount"
+                 defaultValue={amount}
+                 variant="standard"
+                 onChange={e => setAmount(e.target.value)}
+      />
+      <Button variant="contained"
+              color="success"
+              type="submit"
+              className='button4'
+      >
+        Create Account
+      </Button>
+
+    </Stack>
+    </form>
+    </div> -->
