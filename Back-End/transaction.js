@@ -18,7 +18,8 @@ transactionRouter.get('/',  async (req,res,next)=>{
      let query = 'Select * from public."Transaction"'
 
     const transactions =  await passQuery(query, [])
-    res.status(200).send(transactions)
+    console.log(transactions)
+    res.status(200).send({transactions:transactions})
     } catch(err){
      next(err)
     }
@@ -35,7 +36,8 @@ transactionRouter.get('/:transactionId',  async (req,res,next)=>{
    let params = [req.params.transactionId]
 
   const transactions =  await passQuery(query, params)
-  res.status(200).send(transactions)
+  const transaction = transactions[0]
+  res.status(200).send(transaction)
   } catch(err){
    next(err)
   }
@@ -62,7 +64,7 @@ transactionRouter.post('/:transactionId/:amount/:user1/:user2', async (req,res,n
       query = 'INSERT INTO public."Transaction"("TID", date, amount, "senderAccount", "recipentAccount") VALUES ($1, $2, $3, $4, $5)'
       params = [req.params.transactionId,newDate, req.params.amount, req.params.user1,req.params.user2]
       await passQuery(query, params)
-      res.status(200).send('Transaction successfull!')
+      res.status(200).send({message: 'Transaction successfull!'}      )
 
       } catch(err){
        next(err)
@@ -77,7 +79,7 @@ transactionRouter.post('/:transactionId/:amount/:user1/:user2', async (req,res,n
     
     query = 'DELETE FROM public."Transaction" WHERE "TID" = $1'
       passQuery(query, params)
-      res.status(204).send()
+      res.status(200).send({message:'Deletion successful,go back to home page'})
     
   }
   catch(error) {
@@ -89,7 +91,7 @@ transactionRouter.post('/:transactionId/:amount/:user1/:user2', async (req,res,n
 
  transactionRouter.use((err, req, res, next) => {
     
-  res.status(500).send(err.message)
+  res.status(500).send({message: err.message})
 })
 
  module.exports = transactionRouter

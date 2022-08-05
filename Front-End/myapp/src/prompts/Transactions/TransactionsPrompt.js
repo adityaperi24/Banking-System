@@ -13,12 +13,12 @@ function TransactionsPrompt() {
 <div className="prompt1">
     <p className="prompttext2">Select an Option</p>
     <button className='button3' type="button" onClick={handleClick} value='create'>
-        Make an Transaction
+        Make a Transaction
     </button>
 
-    <button className="button3" type="button" onClick={handleClick} value='view' > View an Transaction </button>
+    <button className="button3" type="button" onClick={handleClick} value='view' > View a Transaction </button>
     <button className="button3" type="button" onClick={handleClick} value='viewall' > View all Transactions </button>
-    <button className="button3" type="button" onClick={handleClick} value='Delete' > Delete a Transactions </button>
+    <button className="button3" type="button" onClick={handleClick} value='delete' > Delete a Transaction </button>
 
 
 </div>
