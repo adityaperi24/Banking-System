@@ -7,6 +7,7 @@ import TransactionsPage from './pagecomponents/TransactionsPage';
 import CreateAccountPage from './pagecomponents/CreateAccountPage';
 import ViewAccountPage from './pagecomponents/ViewAccountPage';
 import ViewAllAccountsPage from './pagecomponents/ViewAllAccountsPage';
+import DeleteAccountPage from './pagecomponents/DeleteAccountPage';
 function App() {
 
   
@@ -35,6 +36,10 @@ function App() {
 </Route>  
 <Route exact path='/accounts/viewall'>      
     <ViewAllAccountsPage />    
+</Route>  
+
+<Route exact path='/accounts/delete'>      
+    <DeleteAccountPage />    
 </Route>  
     
      </Router>

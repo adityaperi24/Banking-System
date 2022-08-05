@@ -50,3 +50,18 @@ export const createAccount = async (id,name,type, amount) => {
     console.log(err.message)
 }
   };
+
+  export const deleteAccount = async (id,username) => {
+    try{
+    const response = await fetch(API_ENDPOINT + `/view/${id}`,{
+        method: "DELETE"
+    });
+    const {message} = await response.json();
+    return message;
+
+
+    }
+catch(err){
+    console.log(err.message)
+}
+  };

@@ -97,7 +97,7 @@ viewRouter.delete('/:budgetId',async (req,res,next) => {
     
       query = 'DELETE FROM public."FinanceInfo" WHERE "budgetID" = $1'
       passQuery(query, params)
-      res.status(204).send('Deletion successful')
+      res.status(200).send({message:'Deletion successful, to home page'})
     
   
     
