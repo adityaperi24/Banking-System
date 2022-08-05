@@ -3,7 +3,7 @@ const API_ENDPOINT = 'http://localhost:3000'
  
 export const createTransaction = async (id,amount,user1, user2) => {
     try{
-    const response = await fetch(API_ENDPOINT + `/transaction/${id}/${amount}/${user1}/${user2}`,{
+    const response = await fetch(`/transaction/${id}/${amount}/${user1}/${user2}`,{
         method: "POST"
     });
   
@@ -17,7 +17,7 @@ export const createTransaction = async (id,amount,user1, user2) => {
 
   export const viewTransaction = async (id,name) => {
     try{
-    const response = await fetch(API_ENDPOINT + `/transaction/${id}/`,{
+    const response = await fetch(`/transaction/${id}/`,{
         method: "GET"
     });
     const status =  response.status
@@ -33,9 +33,9 @@ export const createTransaction = async (id,amount,user1, user2) => {
 }
   };
   
-  export const allTransactions = async (id,name) => {
+  export const allTransactions = async () => {
     try{
-    const response = await fetch(API_ENDPOINT + `/transaction/`,{
+    const response = await fetch(`/transaction/`,{
         method: "GET"
     });
     const status =  response.status
@@ -53,7 +53,7 @@ export const createTransaction = async (id,amount,user1, user2) => {
 
   export const deleteTransaction = async (id) => {
     try{
-    const response = await fetch(API_ENDPOINT + `/transaction/${id}`,{
+    const response = await fetch(`/transaction/${id}`,{
         method: "DELETE"
     });
     const {message} = await response.json();

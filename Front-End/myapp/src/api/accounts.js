@@ -3,7 +3,7 @@ const API_ENDPOINT = 'http://localhost:3000'
  
 export const createAccount = async (id,name,type, amount) => {
     try{
-    const response = await fetch(API_ENDPOINT + `/view/${id}/${name}/${type}/${amount}`,{
+    const response = await fetch(`/view/${id}/${name}/${type}/${amount}`,{
         method: "POST"
     });
   
@@ -17,7 +17,7 @@ export const createAccount = async (id,name,type, amount) => {
 
   export const responseAccount = async (id,name) => {
     try{
-    const response = await fetch(API_ENDPOINT + `/view/${id}/`,{
+    const response = await fetch(`/view/${id}/`,{
         method: "GET"
     });
     const status =  response.status
@@ -35,7 +35,7 @@ export const createAccount = async (id,name,type, amount) => {
   
   export const allAccounts = async (id,name) => {
     try{
-    const response = await fetch(API_ENDPOINT + `/view/`,{
+    const response = await fetch(`/view/`,{
         method: "GET"
     });
     const status =  response.status
@@ -53,7 +53,7 @@ export const createAccount = async (id,name,type, amount) => {
 
   export const deleteAccount = async (id,username) => {
     try{
-    const response = await fetch(API_ENDPOINT + `/view/${id}`,{
+    const response = await fetch(`/view/${id}`,{
         method: "DELETE"
     });
     const {message} = await response.json();
@@ -70,7 +70,7 @@ catch(err){
   
   export const updateAccount = async (id,amount) => {
     try{
-    const response = await fetch(API_ENDPOINT + `/view/${id}/${amount}`,{
+    const response = await fetch(`/view/${id}/${amount}`,{
         method: "PUT"
     });
     const {message} = await response.json();
