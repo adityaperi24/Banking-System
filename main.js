@@ -12,7 +12,7 @@ app.use(cors({
     methods: ["GET", "PUT", "POST", "DELETE"]
 }))
 if(process.env.NODE_ENV === "production"){
-    app.use(express.static(path.join(__dirname, "Front-End/myapp/public")))
+    app.use(express.static(path.join(__dirname, "Front-End/myapp")))
 
 }
 app.use('/view', viewRouter)
