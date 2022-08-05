@@ -78,7 +78,8 @@ viewRouter.put('/:budgetId/:deduct', async (req,res,next) => {
 
         params = [newBalance, req.params.budgetId]
         await passQuery(query, params)
-        res.status(201).send('Record Updated')
+        res.status(201).send({message:'Record Updated'}
+        )
         
     
     }

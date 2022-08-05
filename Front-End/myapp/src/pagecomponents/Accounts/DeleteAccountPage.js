@@ -1,6 +1,6 @@
-import HEADING from "../extras/Header";
-import BackComponent from "../extras/BackComponent";
-import DeleteAccountPrompt from "../prompts/DeleteAccountPrompt";
+import HEADING from "../../extras/Header";
+import BackComponent from "../../extras/BackComponent";
+import DeleteAccountPrompt from "../../prompts/Accounts/DeleteAccountPrompt";
 function DeleteAccountPage() {
   return (
 <body className="page">   

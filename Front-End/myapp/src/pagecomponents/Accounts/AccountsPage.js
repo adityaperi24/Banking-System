@@ -1,6 +1,6 @@
-import HEADING from "../extras/Header";
-import BackComponent from "../extras/BackComponent";
-import AccountsPrompt from "../prompts/AccountsPrompt";
+import HEADING from "../../extras/Header";
+import BackComponent from "../../extras/BackComponent";
+import AccountsPrompt from "../../prompts/Accounts/AccountsPrompt";
 function AccountsPage() {
     // window.location.reload();
   return (

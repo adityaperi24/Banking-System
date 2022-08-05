@@ -1,7 +1,7 @@
 
 // import { response } from 'express';
 import { useState } from 'react';
-import { createAccount } from '../api/accounts';
+import { createAccount } from '../../api/accounts';
 // import { useHistory } from 'react-router-dom';
 
 

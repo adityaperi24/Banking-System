@@ -1,6 +1,6 @@
-import HEADING from "../extras/Header";
-import BackComponent from "../extras/BackComponent";
-import TransactionsPrompt from "../prompts/TransactionsPrompt"
+import HEADING from "../../extras/Header";
+import BackComponent from "../../extras/BackComponent";
+import TransactionsPrompt from "../../prompts/Transactions/TransactionsPrompt"
 function TransactionsPage() {
   return (
 <body className="page">   

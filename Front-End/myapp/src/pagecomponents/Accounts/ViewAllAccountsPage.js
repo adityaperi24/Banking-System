@@ -1,6 +1,6 @@
-import HEADING from "../extras/Header";
-import BackComponent from "../extras/BackComponent";
-import { allAccounts } from "../api/accounts";
+import HEADING from "../../extras/Header";
+import BackComponent from "../../extras/BackComponent";
+import { allAccounts } from "../../api/accounts";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Fragment } from "react";

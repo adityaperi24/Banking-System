@@ -18,8 +18,8 @@ function AccountsPrompt() {
 
     <button className="button3" type="button" onClick={handleClick} value='view' > View an Account </button>
     <button className="button3" type="button" onClick={handleClick} value='viewall' > View all Accounts </button>
-    <button className="button3" type="button" onClick={handleClick} value='Delete' > Delete an Accounts </button>
-    <button className="button3" type="button" onClick={handleClick} value='Withdraw' > Withdraw Money From Account </button>
+    <button className="button3" type="button" onClick={handleClick} value='delete' > Delete an Account </button>
+    <button className="button3" type="button" onClick={handleClick} value='withdraw' > Withdraw Money From Account </button>
 
 
 </div>
