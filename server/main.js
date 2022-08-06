@@ -1,8 +1,7 @@
 const express = require('express') 
 const app = express()
 const cors = require('cors')
-
-const viewRouter = require('./view.js');
+const viewRouter = require('./view.js')
 const transactionRouter = require('./transaction.js');
 const path = require("path")
 const  PORT = process.env.PORT || 3000
@@ -12,7 +11,7 @@ app.use(cors({
     methods: ["GET", "PUT", "POST", "DELETE"]
 }))
 if(process.env.NODE_ENV === "production"){
-    app.use(express.static(path.join(__dirname, "Front-End/myapp/src")))
+    app.use(express.static(path.join(__dirname, "Front-End/myapp/public")))
 
 }
 app.use('/view', viewRouter)
